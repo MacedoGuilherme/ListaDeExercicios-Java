@@ -1,32 +1,39 @@
 package entities;
 
-import java.util.ArrayList;
-
 public class Valores {
 	
-	private Integer numero;
-	
-	Integer[] numeros = new Integer[3];
+	private Integer[] numeros = new Integer[3];
 
-	public Valores(Integer numero) {
-		super();
-		this.numero = numero;
+	public Valores(Integer[] numeros) {
+		this.numeros = numeros;
 	}
 
-	public Integer getNumero() {
-		return numero;
+	public Integer[] getNumeros() {
+		return numeros;
 	}
 
-	public void setNumero(Integer numero) {
-		this.numero = numero;
+	public void setNumeros(Integer[] numeros) {
+		this.numeros = numeros;
 	}
 
 	public void odernacao() {
-		int aux = -9999;
+		int aux;
 		for(int i = 0; i <= numeros.length; i++) {
-			
+			for(int j = i+1; j <= numeros.length -1; j++) {
+				if(numeros[i] > numeros[j]) {
+					aux = numeros[i];
+					numeros[i] = numeros[j];
+					numeros[j] = aux;
+				}
+			}
 		}
 	}
 	
-
+	public void showResult() {
+		System.out.println("Números ordenados:");
+		for(int i = 0; i < numeros.length; i++) {
+			System.out.print(numeros[i] + " ");
+		}
+	}
+	
 }
