@@ -1,4 +1,4 @@
-package exercicio34;
+package entities;
 
 public class Professor {
 	

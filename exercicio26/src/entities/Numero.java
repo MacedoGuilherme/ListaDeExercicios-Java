@@ -32,7 +32,7 @@ public class Numero {
 			escrita = "Quatro";
 			break;
 		case 5:
-			System.out.println("Cinco");
+			escrita = "Cinco";
 			break;
 		default:
 			escrita = "Número Inválido";

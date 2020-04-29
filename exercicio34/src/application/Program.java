@@ -1,6 +1,6 @@
 package application;
 
-import exercicio34.Professor;
+import entities.Professor;
 
 public class Program {
 
